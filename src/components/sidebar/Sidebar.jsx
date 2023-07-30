@@ -44,11 +44,12 @@ const Sidebar = () => {
                     <span>Users</span>
                 </li>
             </Link>
-               
+            <Link to = "/birds" style={{textDecoration: "none"}}>
                 <li>
                     <GiNestBirds className = 'icon' />
                     <span>Birds</span>
                 </li>
+            </Link>
                 <li>
                     <MdGroups2 className='icon' />
                     <span>Community</span>
