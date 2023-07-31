@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "./sidebar.scss"
+import "./sidebar.css"
 
 //Import icons
 import {GiParrotHead} from 'react-icons/gi'
@@ -9,18 +9,104 @@ import {AiOutlineUser} from 'react-icons/ai'
 import {GiNestBirds} from 'react-icons/gi'
 import {MdGroups2} from 'react-icons/md'
 import {BsShopWindow} from 'react-icons/bs'
+import {FaBars} from 'react-icons/fa' 
+import {FiSettings} from 'react-icons/fi'
 
-import {Link} from "react-router-dom";
-
-
-
-const Sidebar = () => {
-
-   
+import {NavLink} from "react-router-dom";
 
 
-    return (
-       <div className="sidebar">
+
+const Sidebar = ({children}) => {
+
+    const menuItem = [
+        {
+            path:"/",
+            name:"Dashboard",
+            icon:<MdOutlineDashboardCustomize/>
+        },
+        {
+            path:"/users",
+            name:"Users",
+            icon:<AiOutlineUser/>
+        },
+        {
+            path:"/birds",
+            name:"Birds",
+            icon:<GiNestBirds/>
+        },
+        {
+            path:"/community",
+            name:"Community",
+            icon:<MdGroups2/>
+        },
+        {
+            path:"/store",
+            name:"Store",
+            icon:<BsShopWindow />
+        },
+        {
+            path:"/setting",
+            name:"Setting",
+            icon:<FiSettings />
+        },
+       
+    ] 
+
+    return(
+            <div className="bar">
+               <div className="sidebar">
+                   <div className="top_section">
+                       <h1 className="logo">
+                           Bird World Admin
+                       </h1>
+                       <div className="bars">
+                           <FaBars/>
+                       </div>
+                   </div>
+
+                   {
+                       menuItem.map((item, index)=>(
+                           <NavLink to={item.path} key = {index} className="link" activeclassName="active">
+                               <div className="icon">{item.icon}</div>
+                               <div className="link_text">{item.name}</div>
+                           </NavLink>
+                       ))
+                   }
+               </div>
+               {children}
+            </div>
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+        /* <div className="sidebar">
           <div className="top">
               <Link to = "/" style={{textDecoration: "none"}}>
               <span className="logo">
@@ -50,17 +136,21 @@ const Sidebar = () => {
                     <span>Birds</span>
                 </li>
             </Link>
-                <li>
+
+            <Link to = "/community" style={{textDecoration: "none"}}>
+            <li>
                     <MdGroups2 className='icon' />
                     <span>Community</span>
-                </li>
+            </li>
+            </Link>
+                
                 <li>
                     <BsShopWindow className = 'icon' />
                     <span>Store</span>
                 </li>
             </ul>
           </div> 
-       </div>
+       </div>  */
     )
 }
 
