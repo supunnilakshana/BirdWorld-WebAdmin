@@ -74,8 +74,8 @@ const Sidebar = ({children}) => {
                    }
                </div>
                {children}
-            </div>
-     
+            </div> 
+      
      
      
      
@@ -155,3 +155,4 @@ const Sidebar = ({children}) => {
 }
 
 export default Sidebar
+

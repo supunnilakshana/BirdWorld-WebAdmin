@@ -1,0 +1,63 @@
+.posts{
+    width: 1035px;
+    margin: 30px 40px 50px 40px;
+    /* width:85%; */
+    object-fit:cover;
+    
+
+}
+
+.post_header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    
+}
+
+.post_header BiDotsHorizontalRounded{
+    float: left;
+}
+.post_headerAuthor{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.post_headerAuthor > span{
+    color:gray;
+    font-size: 15px;
+}
+
+.post_image > img{
+   width: 1100px;
+   height: 400px;
+   border-radius: 6px;
+   border: 0.6px solid rgba(128, 128, 128, 0.516);
+}
+
+.post_footer{
+
+}
+
+.post_footerIcons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+
+}
+
+.post_iconsMain{
+    padding:7px;
+}
+
+.post_footerIcons  :hover{
+    color: red;
+    cursor: pointer;
+}
+
+
