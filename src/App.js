@@ -3,6 +3,7 @@ import Home from "./pages/home/Home"
 import List from "./pages/list/List"
 import Birds from "./pages/birds/Birds"
 import Community from "./pages/community/Community"
+import Login from "./pages/login/Login"
 
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
@@ -31,6 +32,9 @@ function App() {
 
           <Route path = "/community">
             <Route index element = {<Community/>}/>
+          </Route>
+          <Route path = "/login">
+            <Route index element = {<Login/>}/>
           </Route>
           
          </Routes>
