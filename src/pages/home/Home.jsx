@@ -3,7 +3,7 @@ import React from 'react'
 import Navbar from '../../components/navbar/Navbar'
 import Sidebar from '../../components/sidebar/Sidebar'
 import Widgets from '../../components/widgets/Widgets'
-import './home.scss'
+import './home.css'
 
 const Home = () => {
     return (

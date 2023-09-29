@@ -1,54 +1,76 @@
-import React from 'react';
-import "./login.scss";
-import {
-  MDBBtn,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBIcon,
-  MDBInput
-}
-from 'mdb-react-ui-kit';
+import React, { useContext, useState } from "react";
+import "./login.css";
+import { AuthContext } from "../../context/authContext/AuthContext";
+import { login } from "../../context/authContext/apiCalls";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function Login() {
+const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { isFetching, dispatch } = useContext(AuthContext);
+  const [rememberDevice, setRememberDevice] = useState(false);
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    const authres = await login({ email, password }, dispatch);
+    if (rememberDevice) {
+      localStorage.setItem("authdet", JSON.stringify(authres));
+    } else {
+      localStorage.removeItem("authdet");
+    }
+  };
   return (
-    <div className="log">
-    <MDBContainer fluid>
-    <MDBRow>
+    <div className="wrapper bg-dark d-flex align-items-center w-100">
+      <div className="login">
+        <h2 className="mb-3">Login Form</h2>
 
-      <MDBCol sm='6'>
+        <form>
+          <div className="form-group  mb-2">
+            <label htmlFor="email" className="form-label" required>
+              Email Address
+            </label>
+            <input
+              type="email"
+              className="form-control"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <div className="invalid-feedback">Please entrt your email</div>
+          </div>
+          <div className="form-group was-validated mb-2">
+            <label htmlFor="password" className="form-label" required>
+              Password
+            </label>
+            <input
+              type="password"
+              className="form-control"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <div className="invalid-feedback">Please entrt your password</div>
+          </div>
+          <div className="form-group form-check mb-2">
+            <input
+              type="checkbox"
+              checked={rememberDevice}
+              onChange={() => setRememberDevice(!rememberDevice)}
+              className="form-check-input"
+            />
+            <label htmlFor="check" className="form-check-label">
+              Remember me
+            </label>
+          </div>
 
-        <div className='d-flex flex-row ps-5 pt-5'>
-          <MDBIcon fas icon="crow fa-3x me-3" style={{ color: '#709085' }}/>
-          <span className="h1 fw-bold mb-0">Logo</span>
-        </div>
-
-        <div className='d-flex flex-column justify-content-center h-custom-2 w-75 pt-4'>
-
-          <h3 className="fw-normal mb-3 ps-5 pb-3" style={{letterSpacing: '1px'}}>Log in</h3>
-
-          <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Email address' id='formControlLg' type='email' size="lg"/>
-          <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Password' id='formControlLg' type='password' size="lg"/>
-
-          <MDBBtn className="mb-4 px-5 mx-5 w-100" color='info' size='lg'>Login</MDBBtn>
-          <p className="small mb-5 pb-lg-3 ms-5"><a class="text-muted" href="#!">Forgot password?</a></p>
-          <p className='ms-5'>Don't have an account? <a href="#!" class="link-info">Register here</a></p>
-
-        </div>
-
-      </MDBCol>
-
-      <MDBCol sm='6' className='d-none d-sm-block px-0'>
-        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img3.webp"
-          alt="Login image" className="w-100" style={{objectFit: 'cover', objectPosition: 'left'}} />
-      </MDBCol>
-
-    </MDBRow>
-
-  </MDBContainer>
+          <button
+            onClick={handleLogin}
+            type="submit"
+            className="btn btn-success w-100 mt-2 "
+          >
+            SIGN IN
+          </button>
+        </form>
+      </div>
     </div>
-   
   );
-}
+};
 
 export default Login;

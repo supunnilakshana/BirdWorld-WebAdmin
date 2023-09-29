@@ -1,5 +1,5 @@
 import React from "react";
-import "./navbar.scss";
+import "./navbar.css";
 
 import { BiSearchAlt2 } from "react-icons/bi";
 import { GrLanguage } from "react-icons/gr";
@@ -33,7 +33,7 @@ const Navbar = () => {
           </div>
           <div className="item">
             <IoMdNotifications className="icon" />
-            <div className="counter">1</div>
+            <div className="counter"><p>5</p></div>
           </div>
           <div className="item">
             <img src={image} alt="" className="avatar" />

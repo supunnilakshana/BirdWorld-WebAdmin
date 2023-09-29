@@ -29,8 +29,9 @@ const Sidebar = ({children}) => {
             name:"Users",
             icon:<AiOutlineUser/>
         },
+       
         {
-            path:"/birds",
+            path:"/birds_list",
             name:"Birds",
             icon:<GiNestBirds/>
         },

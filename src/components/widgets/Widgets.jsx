@@ -1,5 +1,5 @@
 import React from 'react'
-import './widgets.scss'
+import './widgets.css'
 
 import {MdOutlineKeyboardArrowUp} from 'react-icons/md'
 import {MdOutlinePersonOutline} from 'react-icons/md'
@@ -45,8 +45,8 @@ const Widgets = ({type}) => {
         <div className="widget">
             <div className="left">
                 <span className="title">{data.title}</span>
-                <span className="counter">
-                    {data.isMoney && "$"} {amount}
+                <span className="counter_w">
+                    {data.isMoney && "$"} {/* {amount} */}
                 </span>
                 <span className="link">{data.link}</span>
             </div>

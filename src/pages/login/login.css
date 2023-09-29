@@ -1,0 +1,17 @@
+.wrapper{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    
+
+}
+
+.login{
+    width:300pxp;
+    padding: 20px;
+    height:min-content;
+    border-radius: 5px;
+    color: black;
+    background: rgb(238,241, 243);
+}

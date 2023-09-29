@@ -1,0 +1,23 @@
+.birdlist{
+    display: flex;
+}
+
+.birdlist_Container{
+    flex:6;
+   
+    background-color: #F6F4EB;
+    
+}
+
+.add_btn{
+    margin-top: 20px;
+    margin-left: 70px;
+   
+}
+
+.list{
+    padding-top: 20px;
+    margin-left: 70px;
+    margin-right: 70px;
+    
+}

@@ -2,7 +2,7 @@ import React from 'react'
 import Sidebar from '../../components/sidebar/Sidebar'
 import Navbar from '../../components/navbar/Navbar'
 import Birdform from '../../components/bird_form/Birdform'
-import "./birds.css"
+import "./add_birds.css"
 
 const birds = () => {
     return (

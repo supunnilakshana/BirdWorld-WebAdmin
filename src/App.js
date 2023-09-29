@@ -1,7 +1,8 @@
 import React from 'react'
 import Home from "./pages/home/Home"
 import List from "./pages/list/List"
-import Birds from "./pages/birds/Birds"
+import Birds from "./pages/birds_add/Add_Birds"
+import Birds_list from "./pages/bird_list/Bird_list"
 import Community from "./pages/community/Community"
 import Login from "./pages/login/Login"
 
@@ -25,10 +26,15 @@ function App() {
              <Route index element = {<List/>}/>
            </Route>
 
-           <Route path = "/birds">
+            <Route path = "/birds">
              <Route index element = {<Birds/>}/>
            </Route>
-         </Route>
+         </Route> 
+
+           <Route path = "/birds_list">
+             <Route index element = {<Birds_list/>}/>
+           </Route>
+         
 
           <Route path = "/community">
             <Route index element = {<Community/>}/>
