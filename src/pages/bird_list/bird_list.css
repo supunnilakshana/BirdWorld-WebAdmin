@@ -12,8 +12,14 @@
 .add_btn{
     margin-top: 20px;
     margin-left: 70px;
+    cursor:pointer;
+   
    
 }
+
+/* .nav{
+    z-index:1;
+} */
 
 .list{
     padding-top: 20px;

@@ -6,7 +6,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import {Link} from "react-router-dom";
 
 const columns = [
-  { field: 'id', headerName: 'ID', width: 70 },
+  { field: 'id', headerName: 'ID', width: 70 }, 
   { field: 's_name', headerName: 'Scientific Name', width: 300 },
   { field: 'image', headerName: 'Image', width: 300 },
   {
@@ -16,7 +16,10 @@ const columns = [
     renderCell: (params) => {
         return (
           <div>
-            <Button variant= "success" className= "update" onClick={() => handleEdit(params.row.id)}>Update</Button>
+            <Link to="/birds_update">
+                <Button variant= "success" className= "update" onClick={() => handleEdit(params.row.id)}>Update</Button>
+            </Link>
+            
             <Button variant= "danger" className= "delete" onClick={() => handleDelete(params.row.id)}>Delete</Button>
           </div>
         );
@@ -27,10 +30,10 @@ const columns = [
 
 const rows = [
   { id: 1, s_name: 'Snow', image: 'Jon',actions: 35 },
-  { id: 1, s_name: 'Snow', image: 'Jon',actions: 35 },
-  { id: 1, s_name: 'Snow', image: 'Jon',actions: 35 },
-  { id: 1, s_name: 'Snow', image: 'Jon',actions: 35 },
-  { id: 1, s_name: 'Snow', image: 'Jon',actions: 35 },
+  { id: 2, s_name: 'Snow', image: 'Jon',actions: 35 },
+  { id: 3, s_name: 'Snow', image: 'Jon',actions: 35 },
+  { id: 4, s_name: 'Snow', image: 'Jon',actions: 35 },
+  { id: 5, s_name: 'Snow', image: 'Jon',actions: 35 },
   
 ];
 

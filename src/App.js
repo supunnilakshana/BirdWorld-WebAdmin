@@ -3,6 +3,7 @@ import Home from "./pages/home/Home"
 import List from "./pages/list/List"
 import Birds from "./pages/birds_add/Add_Birds"
 import Birds_list from "./pages/bird_list/Bird_list"
+import Birds_update from "./pages/bird_update/Bird_update"
 import Community from "./pages/community/Community"
 import Login from "./pages/login/Login"
 
@@ -33,6 +34,10 @@ function App() {
 
            <Route path = "/birds_list">
              <Route index element = {<Birds_list/>}/>
+           </Route>
+
+           <Route path = "/birds_update">
+             <Route index element = {<Birds_update/>}/>
            </Route>
          
 
