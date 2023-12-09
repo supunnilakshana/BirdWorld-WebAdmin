@@ -52,23 +52,26 @@ main{
     gap: 15px;
     transition: all 0.5s;
     text-decoration: none;
-    border-bottom: 1px solid transparent; /* Add this line */
-  height: 50px;
-  
+    border-bottom: 1px solid transparent;
+    height: 50px;
+    width: 100% !important;
+    box-sizing: border-box;
     
 }
-
-.link:hover{
-    background-color: #000;
+.link:hover {
+  background-color: #000;
     color: #fff;
     transition: all 0.5s;
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 .active{
     background-color: #000;
     color: #fff;
     border-bottom:none;
-    
+    width:100%;
+    box-sizing: border-box;
 }
 
 .icon,.link_text{

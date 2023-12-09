@@ -14,9 +14,11 @@ const columns = [
     headerName: 'Actions',
     width: 300,
     renderCell: (params) => {
+
+      
         return (
           <div>
-            <Link to="/birds_update">
+            <Link to={"/birds_update"}>
                 <Button variant= "success" className= "update" onClick={() => handleEdit(params.row.id)}>Update</Button>
             </Link>
             
@@ -38,7 +40,7 @@ const rows = [
 ];
 
 const handleEdit = (id) => {
-  // Implement the edit action here, e.g., navigate to the edit page
+ 
 };
 
 const handleDelete = (id) => {

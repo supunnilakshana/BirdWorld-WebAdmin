@@ -5,12 +5,14 @@ import Button from 'react-bootstrap/Button';
 
 
 
+
+
 const Bupdate_form = () => {
     return (
         <Form className = "container">
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
         <Form.Label>Name of the bird</Form.Label>
-        <Form.Control type="text" placeholder="NAME" />
+        <Form.Control type="text" placeholder="NAME" value='Snow'/>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
