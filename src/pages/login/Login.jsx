@@ -1,76 +1,46 @@
-import React, { useContext, useState } from "react";
-import "./login.css";
-import { AuthContext } from "../../context/authContext/AuthContext";
-import { login } from "../../context/authContext/apiCalls";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React from 'react'
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Image from 'react-bootstrap/Image';
+import './login.css';
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const { isFetching, dispatch } = useContext(AuthContext);
-  const [rememberDevice, setRememberDevice] = useState(false);
-
-  const handleLogin = async (e) => {
-    e.preventDefault();
-
-    const authres = await login({ email, password }, dispatch);
-    if (rememberDevice) {
-      localStorage.setItem("authdet", JSON.stringify(authres));
-    } else {
-      localStorage.removeItem("authdet");
-    }
-  };
   return (
-    <div className="wrapper bg-dark d-flex align-items-center w-100">
-      <div className="login">
-        <h2 className="mb-3">Login Form</h2>
+    <div className='container' >
+      <div className="row">
+        <div className="col-6">
 
-        <form>
-          <div className="form-group  mb-2">
-            <label htmlFor="email" className="form-label" required>
-              Email Address
-            </label>
-            <input
-              type="email"
-              className="form-control"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <div className="invalid-feedback">Please entrt your email</div>
-          </div>
-          <div className="form-group was-validated mb-2">
-            <label htmlFor="password" className="form-label" required>
-              Password
-            </label>
-            <input
-              type="password"
-              className="form-control"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <div className="invalid-feedback">Please entrt your password</div>
-          </div>
-          <div className="form-group form-check mb-2">
-            <input
-              type="checkbox"
-              checked={rememberDevice}
-              onChange={() => setRememberDevice(!rememberDevice)}
-              className="form-check-input"
-            />
-            <label htmlFor="check" className="form-check-label">
-              Remember me
-            </label>
-          </div>
+        <Form>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
 
-          <button
-            onClick={handleLogin}
-            type="submit"
-            className="btn btn-success w-100 mt-2 "
-          >
-            SIGN IN
-          </button>
-        </form>
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicCheckbox">
+        <Form.Check type="checkbox" label="Check me out" />
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
+
+        </div>
+        <div className="col-6">
+
+        <Image src="https://img.freepik.com/free-photo/vibrant-abstract-hummingbird-flying-with-elegance-generated-by-ai_188544-19557.jpg?size=626&ext=jpg&ga=GA1.1.1550395499.1698851088&semt=ais" thumbnail />
+
+        </div>
       </div>
+      
     </div>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login

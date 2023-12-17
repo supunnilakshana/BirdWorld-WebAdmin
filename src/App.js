@@ -6,6 +6,7 @@ import Birds_list from "./pages/bird_list/Bird_list"
 import Birds_update from "./pages/bird_update/Bird_update"
 import Community from "./pages/community/Community"
 import Login from "./pages/login/Login"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 

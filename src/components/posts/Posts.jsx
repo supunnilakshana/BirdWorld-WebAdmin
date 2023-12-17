@@ -24,7 +24,7 @@ const Data = [
 const Posts = () => {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
-  // Function to toggle dropdown visibility
+  
   const toggleDropdown = () => {
     setIsDropdownVisible(!isDropdownVisible);
   };
@@ -39,10 +39,10 @@ const Posts = () => {
               {userName} . <span>{time}</span>
             </div>
             
-            {/* Updated code: Directly attach onClick to BiDotsHorizontalRounded */}
+           
             <BiDotsHorizontalRounded onClick={toggleDropdown} />
             
-            {/* Check and render the dropdown if it's visible */}
+         
             {isDropdownVisible && <Dropdown />}
           </div>
           <div className="des">{description}</div>
