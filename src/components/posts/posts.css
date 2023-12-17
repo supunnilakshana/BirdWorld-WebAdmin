@@ -18,7 +18,12 @@
 
 .post_header BiDotsHorizontalRounded{
     float: left;
+    cursor: pointer;
 }
+.thriple{
+    cursor: pointer;
+}
+
 .post_headerAuthor{
     display:flex;
     flex-direction:row;

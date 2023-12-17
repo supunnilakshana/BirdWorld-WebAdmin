@@ -15,19 +15,19 @@ const columns = [
     width: 3,
   },
   {
-    field: 'fullName',
+    /* field: 'fullName',
     headerName: 'Full name',
     description: 'This column has a value getter and is not sortable.',
     sortable: false,
-    width: 160,
+    width: 160, */
     /* valueGetter: (params) =>
       `${params.row.firstName || ''} ${params.row.lastName || ''}`, */
 
       renderCell:(params) =>{
         return(
           <>
-              <span>params.row.lastName</span>
-          <p>params.row.age</p>
+             {/*  <span>params.row.lastName</span>
+          <p>params.row.age</p> */}
           </>
          
         )

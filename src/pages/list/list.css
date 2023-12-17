@@ -1,6 +1,13 @@
 
-.list{
+.listpagecont{
     display: flex;
+    margin-left: 0;
+    margin-right: 0;
+
+    padding: 0;
+    justify-content: left;
+    
+    
 }
 
 .listContainer{
