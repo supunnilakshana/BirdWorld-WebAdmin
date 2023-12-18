@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+import Logo from "../../assets/logo.jpeg"
 import { Button, Container, Grid, InputAdornment, Paper, TextField, Typography } from '@mui/material';
 import { Lock, MailOutline } from '@mui/icons-material';
 
@@ -9,10 +11,10 @@ function Login() {
         <Grid item xs={12} sm={6}>
           <Paper elevation={3} style={{ padding: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Typography variant="h4" component="div" mb={3} fontWeight="bold">
-              Logo
+              <img src={Logo} alt="Logo" style={{width:'120px', height: '130px'}}/>
             </Typography>
             <Typography variant="h5" component="h3" mb={3} fontWeight="normal" letterSpacing={1}>
-              Log in
+              
             </Typography>
             <form>
               <TextField
@@ -44,6 +46,7 @@ function Login() {
                   ),
                 }}
               />
+              <Link to ="/">
               <Button
                 fullWidth
                 variant="contained"
@@ -53,12 +56,11 @@ function Login() {
               >
                 Login
               </Button>
+              </Link>
               <Typography variant="body2" component="p" color="textSecondary" mt={3}>
                 <a href="#!" className="text-muted">Forgot password?</a>
               </Typography>
-              <Typography variant="body2" component="p" mt={2}>
-                Don't have an account? <a href="#!" className="link-info">Register here</a>
-              </Typography>
+              
             </form>
           </Paper>
         </Grid>
@@ -66,7 +68,7 @@ function Login() {
           <img
             src="https://img.freepik.com/free-photo/flock-canada-geese-flying-great-salt-lake-usa_181624-42797.jpg?size=626&ext=jpg&ga=GA1.1.1550395499.1698851088&semt=ais"
             alt="Login image"
-            style={{ width: '100%', objectFit: 'cover', objectPosition: 'left', height:'80vh'}}
+            style={{ width: '100%', objectFit: 'cover', objectPosition: 'left', height:'84vh', borderRedius:'5px'}}
           />
         </Grid>
       </Grid>

@@ -52,7 +52,7 @@ main{
 
 .link{
     display: flex;
-    color: #000;
+    color: #1a1b53;
     padding: 10px 15px;
     gap: 15px;
     transition: all 0.5s;
@@ -64,15 +64,20 @@ main{
     
 }
 .link:hover {
-  background-color: #000;
+  background-color: #1a1b53;
     color: #fff;
     transition: all 0.5s;
     width: 100%; 
     box-sizing: border-box; 
 }
 
+.link:active{
+    color: #fff;
+}
+
+
 .active{
-    background-color: #000;
+    background-color: #1a1b53;
     color: #fff;
     border-bottom:none;
     width:100%;

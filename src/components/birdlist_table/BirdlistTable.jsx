@@ -44,7 +44,7 @@ const handleEdit = (id) => {
 };
 
 const handleDelete = (id) => {
-  // Implement the delete action here, e.g., show a confirmation dialog
+  
 };
 
 

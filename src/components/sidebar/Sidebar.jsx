@@ -1,6 +1,7 @@
 import React from 'react'
 
 import "./sidebar.css"
+import Logo from "../../assets/logo.jpeg"
 
 //Import icons
 import {GiParrotHead} from 'react-icons/gi'
@@ -59,11 +60,11 @@ const Sidebar = ({children}) => {
                <div className="sidebar">
                    <div className="top_section">
                        <h1 className="logo">
-                           Bird World Admin
+                           <img src={Logo} alt="" style={{width:'85px', height:'43px', margin:'0 30px 0 30px'}}/>
                        </h1>
-                       <div className="bars">
+                       {/* <div className="bars">
                            <FaBars/>
-                       </div>
+                       </div> */}
                    </div>
 
                    {

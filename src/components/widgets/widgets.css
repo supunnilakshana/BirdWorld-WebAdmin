@@ -18,7 +18,7 @@
 .title{
     font-weight: bold;
     font-size: 14px;
-    color: gray;
+    color: #1a1b53;
 }
 
 .counter_w{
@@ -36,4 +36,8 @@
     display: flex;
     align-items: center;
     font-size: 14px;
+}
+
+.icon{
+    color: #1a1b53;
 }
