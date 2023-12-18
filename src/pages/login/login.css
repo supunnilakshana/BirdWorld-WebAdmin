@@ -1,21 +1,26 @@
-.wrapper{
+.wrapper {
     height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-
-    
-
-}
-
-.login{
-    width:300pxp;
-    padding: 20px;
-    height:min-content;
+  }
+  
+  .signin {
+    width: 100%;
+    padding: 50px;
     border-radius: 5px;
     color: black;
-    background: rgb(238,241, 243);
-}
-.container{
+    background: rgb(238, 241, 243);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow only to the form */
+    height: 100%; /* Fill the entire height of the wrapper */
+  }
+  
+  .container {
     width: 200px;
-    background: rgb(238,241, 243);
-}
+    background: rgb(238, 241, 243);
+  }
+  
+  #img {
+    height: 100%;
+  }
+  
