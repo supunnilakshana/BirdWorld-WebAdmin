@@ -53,15 +53,10 @@ const columns = [
 ];
 
 const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', email: 'sguru@gmail.com' },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', email: 'sguru@gmail.com'},
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', email: 'sguru@gmail.com' },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', email: 'sguru@gmail.com' },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', email: 'sguru@gmail.com' },
-  { id: 6, lastName: 'Melisandre', firstName: null, email: 'sguru@gmail.com' },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara',email: 'sguru@gmail.com'},
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', email: 'sguru@gmail.com' },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', email: 'sguru@gmail.com'},
+  { id: 1, lastName: 'Rajaguru', firstName: 'Supun', email: 'sguru@gmail.com' },
+  { id: 2, lastName: 'Nilukshi', firstName: 'Anuththara', email: 'Anuu@gmail.com'},
+  { id: 3, lastName: 'Madusanka', firstName: 'Dilshan', email: 'dilshm@gmail.com' },
+  
 ];
 
 const handleDelete = (id) => {

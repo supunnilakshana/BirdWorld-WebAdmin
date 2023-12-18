@@ -1,3 +1,4 @@
+// posts.jsx
 import React, { useState } from 'react';
 import { RxAvatar } from 'react-icons/rx';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
@@ -14,19 +15,17 @@ const Data = [
     userName: 'Don_',
     time: '12h ago',
     imgSrc: img1,
-    description:
-      'This is the description about the birds. This very endemic bird for America. They are living as pairs',
+    description: 'This is the description about the birds. This very endemic bird for America. They are living as pairs',
     liked: 'Liked by 22 People',
     comment: '33 Comments',
   },
 ];
 
 const Posts = () => {
-  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+  const [visibleDropdown, setVisibleDropdown] = useState(null);
 
-  
-  const toggleDropdown = () => {
-    setIsDropdownVisible(!isDropdownVisible);
+  const toggleDropdown = (postId) => {
+    setVisibleDropdown(visibleDropdown === postId ? null : postId);
   };
 
   return (
@@ -38,12 +37,8 @@ const Posts = () => {
               <RxAvatar>{avatar}</RxAvatar>
               {userName} . <span>{time}</span>
             </div>
-            
-           
-            <BiDotsHorizontalRounded onClick={toggleDropdown} />
-            
-         
-            {isDropdownVisible && <Dropdown />}
+            <BiDotsHorizontalRounded onClick={() => toggleDropdown(id)} />
+            {visibleDropdown === id && <Dropdown postId={id} toggleDropdown={toggleDropdown} />}
           </div>
           <div className="des">{description}</div>
           <div className="post_image">

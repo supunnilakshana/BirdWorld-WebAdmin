@@ -1,12 +1,14 @@
 .menu {
+  .menu {
     position: absolute;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 20px;
     padding: 10px;
-    left: 90%;
-    top:23%;
+    /* left: 90%; Remove this line */
+    /* top:23%; Remove this line */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
   }
   
   .menu ul {

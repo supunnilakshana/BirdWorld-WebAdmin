@@ -14,7 +14,8 @@ const Community = () => {
       
     
       <div className = "communityContainer">
-      <Navbar/>
+        <div className="navcom"> <Navbar/></div>
+     
       <div className="com_post">
         <Posts/>
         <Posts/>
