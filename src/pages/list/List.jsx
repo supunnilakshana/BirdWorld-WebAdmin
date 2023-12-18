@@ -7,7 +7,10 @@ import Datatable from '../../components/datatable/Datatable'
 const List = () => {
     return (
         <div className="listpagecont">
-          { <Sidebar/>}
+            <div className="listside">
+            <Sidebar/>
+            </div>
+          
          
             <div className="listContainer">
             { <Navbar/>}

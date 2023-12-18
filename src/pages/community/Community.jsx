@@ -7,7 +7,12 @@ import "./community.css"
 const Community = () => {
   return (
     <div className="community">
-      <Sidebar/>
+
+    <div className="side">
+    <Sidebar/>
+    </div>
+      
+    
       <div className = "communityContainer">
       <Navbar/>
       <div className="com_post">
@@ -17,9 +22,9 @@ const Community = () => {
       
       </div>
 
-      
+      </div>
      
-    </div>
+   
   )
 }
 

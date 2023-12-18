@@ -1,20 +1,38 @@
-
-.listpagecont{
+.listpagecont {
     display: flex;
-    margin-left: 0;
-    margin-right: 0;
-
-    padding: 0;
-    justify-content: left;
-    
-    
-}
-
-.listContainer{
-    flex:6;
+    margin-left: 200px; /* Adjust the margin to make space for the fixed Sidebar */
+  }
+  
+  .listside {
+    width: 200px; /* Adjust the width as needed */
+    background-color: #555; /* Example background color for the Sidebar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+  
+  .listContainer {
+    flex: 6;
     background-color: #F6F4EB;
-}
-
-.dtable{
+    overflow-y: auto; /* Enable vertical scrolling for the listContainer */
+    padding: 20px; /* Optional padding for content inside listContainer */
+  }
+  
+  .dtable {
     margin: 10px 10px;
-}
+  }
+  
+  /* Hide the scrollbar for Webkit browsers (Chrome, Safari, etc.) */
+  .listContainer::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  .listContainer::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  
+  .listContainer::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
