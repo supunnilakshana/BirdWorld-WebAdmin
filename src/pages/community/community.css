@@ -3,8 +3,8 @@
 }
 
 .side {
-  width: 200px; /* Adjust the width as needed */
-  background-color: #555; /* Example background color for the Sidebar */
+  width: 200px; 
+  background-color: #555; 
   position: fixed;
   top: 0;
   left: 0;
@@ -14,26 +14,26 @@
 .communityContainer {
   flex: 6;
   background-color: #F6F4EB;
-  overflow-y: auto; /* Enable vertical scrolling for the communityContainer */
-  margin-left: 200px; /* Adjust the margin to make space for the fixed Sidebar */
-  padding: 20px; /* Optional padding for content inside communityContainer */
+  overflow-y: auto; 
+  margin-left: 200px; 
+  padding: 20px; 
 }
 
-/* Fix the Navbar */
+
 .Navbar {
-  /* Add your styles for Navbar here */
+
 }
 
 .com_post {
-  overflow-y: auto; /* Enable vertical scrolling for the .com_post container */
+  overflow-y: auto; 
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 body {
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: transparent transparent; /* Firefox */
+  scrollbar-width: thin; 
+  scrollbar-color: transparent transparent; 
 }
 
 .communityContainer::-webkit-scrollbar {
